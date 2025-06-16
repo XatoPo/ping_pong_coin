@@ -40,12 +40,13 @@ Un juego de Ping Pong retro con efectos visuales neón, múltiples niveles de di
 ## 🚀 Instalación y Uso
 
 1. **Descarga el proyecto**
-   \`\`\`bash
+   ```bash
    # Clona o descarga todos los archivos del proyecto
-   \`\`\`
+   git clone <URL_DEL_REPOSITORIO>
+   ```
 
 2. **Estructura de archivos requerida**
-   \`\`\`
+   ```plaintext
    ping-pong-coin/
    ├── index.html
    ├── css/
@@ -60,10 +61,10 @@ Un juego de Ping Pong retro con efectos visuales neón, múltiples niveles de di
        │   └── decide.mp3
        └── img/
            └── favicon.ico
-   \`\`\`
+   ```
 
 3. **Ejecutar el juego**
-   - Abre \`index.html\` en tu navegador web
+   - Abre `index.html` en tu navegador web
    - O usa un servidor local como Live Server en VS Code
 
 ## 🎨 Tecnologías Utilizadas
@@ -75,12 +76,12 @@ Un juego de Ping Pong retro con efectos visuales neón, múltiples niveles de di
 
 ## 🎵 Archivos de Audio
 
-El juego requiere los siguientes archivos de audio en la carpeta \`assets/sounds/\`:
+El juego requiere los siguientes archivos de audio en la carpeta `assets/sounds/`:
 
-- \`hit.mp3\` - Sonido de rebote de la pelota
-- \`bg-music.mp3\` - Música de fondo para Nivel 1
-- \`bg-music-2.mp3\` - Música de fondo para Niveles 2 y 3
-- \`decide.mp3\` - Sonido del easter egg
+- `hit.mp3` - Sonido de rebote de la pelota
+- `bg-music.mp3` - Música de fondo para Nivel 1
+- `bg-music-2.mp3` - Música de fondo para Niveles 2 y 3
+- `decide.mp3` - Sonido del easter egg
 
 ## 🕹️ Niveles de Dificultad
 
@@ -108,40 +109,40 @@ El juego requiere los siguientes archivos de audio en la carpeta \`assets/sounds
 ## 🔧 Personalización
 
 ### Modificar Velocidades
-Edita las variables en \`game-simple.js\`:
-\`\`\`javascript
+Edita las variables en `game-simple.js`:
+```javascript
 // Nivel 1
-ballSpeedX = Math.random() > 0.5 ? 6 : -6
-ballSpeedY = Math.random() * 5 - 2.5
+ballSpeedX = Math.random() > 0.5 ? 6 : -6;
+ballSpeedY = Math.random() * 5 - 2.5;
 
 // Nivel 2  
-ballSpeedX = Math.random() > 0.5 ? 12 : -12
-ballSpeedY = Math.random() * 10 - 5
+ballSpeedX = Math.random() > 0.5 ? 12 : -12;
+ballSpeedY = Math.random() * 10 - 5;
 
 // Nivel 3
-ballSpeedX = Math.random() > 0.5 ? 10 : -10
-ballSpeedY = Math.random() * 9 - 4.5
-\`\`\`
+ballSpeedX = Math.random() > 0.5 ? 10 : -10;
+ballSpeedY = Math.random() * 9 - 4.5;
+```
 
 ### Cambiar Colores
-Modifica el array de colores en \`style.css\`:
-\`\`\`css
+Modifica el array de colores en `style.css`:
+```css
 :root {
   --primary-color: #00ffff;
   --secondary-color: #ff00ff;
   --accent-color: #ffff00;
 }
-\`\`\`
+```
 
 ## 🐛 Solución de Problemas
 
 ### El audio no funciona
-- Asegúrate de que los archivos de audio estén en \`assets/sounds/\`
+- Asegúrate de que los archivos de audio estén en `assets/sounds/`
 - Los navegadores requieren interacción del usuario antes de reproducir audio
 - Haz clic en cualquier parte de la página antes de iniciar el juego
 
 ### El juego se ve mal
-- Verifica que \`style.css\` esté cargando correctamente
+- Verifica que `style.css` esté cargando correctamente
 - Asegúrate de tener una conexión a internet para las fuentes de Google
 
 ### Controles no responden
