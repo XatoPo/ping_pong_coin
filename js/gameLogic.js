@@ -94,7 +94,7 @@ export class GameLogic {
       if (this.gameState.rightScore >= 10) {
         endGameCallback(
           this.gameState.level === 3
-            ? "¡LA IA TE HA VENCIDO!"
+            ? "¡HAS DERROTADO A LA IA!"
             : "¡JUGADOR 2 GANA!"
         );
         return;
@@ -113,7 +113,7 @@ export class GameLogic {
       if (this.gameState.leftScore >= 10) {
         endGameCallback(
           this.gameState.level === 3
-            ? "¡HAS DERROTADO A LA IA!"
+            ? "¡LA IA TE HA VENCIDO!"
             : "¡JUGADOR 1 GANA!"
         );
         return;
