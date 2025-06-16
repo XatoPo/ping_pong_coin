@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ping Pong Coin - Retro Edition</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="assets/img/favicon.ico">
+</head>
+<body>
+    <!-- Pantalla de Bienvenida -->
+    <div id="welcomeScreen" class="screen active">
+        <div class="container">
+            <h1 class="title-glitch">PING PONG COIN</h1>
+            <p class="subtitle">RETRO ARCADE EXPERIENCE</p>
+            <p class="creator">Creado por Flavio Villanueva Medina</p>
+            <button id="startBtn" class="retro-button">INICIAR JUEGO</button>
+            <p class="easter-hint">Presiona 'K' para sorpresa...</p>
+        </div>
+    </div>
+
+    <!-- Pantalla de Menú -->
+    <div id="menuScreen" class="screen">
+        <div class="container">
+            <h2 class="menu-title">SELECCIONA TU NIVEL</h2>
+            <div class="level-buttons">
+                <button id="level1Btn" class="level-button">
+                    <span class="level-icon">🏓</span>
+                    <span class="level-name">NIVEL 1</span>
+                    <span class="level-desc">PRINCIPIANTE</span>
+                </button>
+                <button id="level2Btn" class="level-button">
+                    <span class="level-icon">⚡</span>
+                    <span class="level-name">NIVEL 2</span>
+                    <span class="level-desc">VELOCIDAD</span>
+                </button>
+                <button id="level3Btn" class="level-button">
+                    <span class="level-icon">🤖</span>
+                    <span class="level-name">NIVEL 3</span>
+                    <span class="level-desc">CONTRA IA</span>
+                </button>
+            </div>
+            <button id="backBtn" class="retro-button secondary">← VOLVER</button>
+        </div>
+    </div>
+
+    <!-- Pantalla de Juego -->
+    <div id="gameScreen" class="screen">
+        <div class="game-container">
+            <div class="game-header">
+                <div id="levelInfo" class="level-info">NIVEL 1</div>
+                <div id="score" class="score">0 : 0</div>
+                <button id="pauseBtn" class="pause-btn">⏸️</button>
+                <button id="volumeBtn" class="control-btn">🔊</button> <!-- Botón de volumen -->
+            </div>
+            <canvas id="gameCanvas" width="800" height="400"></canvas>
+            <div class="controls">
+                <div class="control-info">
+                    <span>JUGADOR 1: W/S</span>
+                    <span>JUGADOR 2: ↑/↓</span>
+                </div>
+            </div>
+            <button id="menuBtn" class="retro-button secondary">← MENÚ</button>
+        </div>
+    </div>
+
+    <!-- Pantalla de Pausa -->
+    <div id="pauseScreen" class="screen overlay">
+        <div class="pause-container">
+            <h2>JUEGO PAUSADO</h2>
+            <button id="resumeBtn" class="retro-button">CONTINUAR</button>
+            <button id="mainMenuBtn" class="retro-button secondary">MENÚ PRINCIPAL</button>
+        </div>
+    </div>
+
+    <!-- Pantalla de Fin -->
+    <div id="endScreen" class="screen overlay">
+        <div class="end-container">
+            <h2 id="endMessage">¡JUEGO TERMINADO!</h2>
+            <div id="finalScore" class="final-score">Puntuación: 0 - 0</div>
+            <button id="playAgainBtn" class="retro-button">JUGAR DE NUEVO</button>
+            <button id="endMenuBtn" class="retro-button secondary">MENÚ PRINCIPAL</button>
+        </div>
+    </div>
+
+    <!-- Easter Egg -->
+    <div id="easterEggScreen" class="screen overlay">
+        <div class="easter-container">
+            <h2>🎉 MODO DISCO ACTIVADO! 🎉</h2>
+            <div class="disco-ball">🕺</div>
+            <button id="closeEasterBtn" class="retro-button">¡GENIAL!</button>
+        </div>
+    </div>
+
+    <script src="js/game-simple.js"></script>
+</body>
+</html>
