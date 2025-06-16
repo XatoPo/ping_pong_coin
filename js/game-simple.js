@@ -475,7 +475,7 @@ function updateGame() {
     updateScore()
     createParticle(ballX, ballY, "#ff0040")
     if (rightScore >= 10) {
-      endGame(gameLevel === 3 ? "¡LA IA TE HA VENCIDO!" : "¡JUGADOR 2 GANA!")
+      endGame(gameLevel === 3 ? "¡HAS DERROTADO A LA IA!" : "¡JUGADOR 2 GANA!")
       return
     }
     resetBall()
@@ -486,7 +486,7 @@ function updateGame() {
     updateScore()
     createParticle(ballX, ballY, "#00ff00")
     if (leftScore >= 10) {
-      endGame(gameLevel === 3 ? "¡HAS DERROTADO A LA IA!" : "¡JUGADOR 1 GANA!")
+      endGame(gameLevel === 3 ? "¡LA IA TE HA VENCIDO!" : "¡JUGADOR 1 GANA!")
       return
     }
     resetBall()
